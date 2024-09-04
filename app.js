@@ -1,5 +1,6 @@
 let productList = []; 
 let cart =[];
+
 fetch('app.json')
   .then((response) => {
     if (!response.ok) {
@@ -67,12 +68,18 @@ function viewProduct(productId) {
   cartholder.addEventListener('click', () => {
     window.location.href = 'checkout.html';
   });
+
+  const paymentButton = document.getElementById('payment');
+  paymentButton.addEventListener('click', () => {
+    window.location.href = 'order-confirmation.html';
+  });
+
   productlistHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if (positionClick.classList.contains('addCart')) {
         alert('1');
     }
-})
+});
 
 
 
