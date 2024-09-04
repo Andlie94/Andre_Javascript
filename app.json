@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "name": "PURPLE HIKERS JACKET WOMAN",
+      "price": 100,
+      "image": "/purple_jacket_background.jpg",
+      "description": "This is a text description",
+      "category": "woman"
+    },
+    {
+      "id": 2,
+      "name": "YELLOW HIKERS JACKET WOMAN",
+      "price": 150,
+      "image": "/girl_yellow.jpeg",
+      "description": "This is a text description",
+      "category": "woman"
+    },
+    {
+      "id": 3,
+      "name": "RED HIKERS JACKET MAN",
+      "price": 200,
+      "image": "/Winred_jacket_background.jpg",
+      "description": "This is a text description",
+      "category": "man"
+    },
+    {
+      "id": 4,
+      "name": "BEIGE HIKERS JACKET MAN ",
+      "price": 250,
+      "image": "/beige_jacket_Bacckground.jpg",
+      "description": "This is a text description",
+      "category": "man"
+    }
+]
