@@ -17,7 +17,7 @@ fetch('app.json')
     console.error('There has been a problem with fetch operation', error);
   });
 
-function showProducts(productList) {
+const showProducts = (productList) => {
   const productContainer = document.getElementById('productlist');
   productContainer.innerHTML = ''; 
   productList.forEach((item) => {
@@ -30,8 +30,7 @@ function showProducts(productList) {
             <button onclick="Cart(${item.id})">Legg til i handlekurven</button>
         </div>`; 
   });
-}
-
+};
 function productFilter(category) {
   let filteredProducts = productList; 
 
@@ -73,13 +72,20 @@ function viewProduct(productId) {
   paymentButton.addEventListener('click', () => {
     window.location.href = 'order-confirmation.html';
   });
-
+  
+  function addToCart(productId) {
+    const product = productList.find(p => p.id === productId);
+    if (product) {
+      cart.push(product);
+      alert(`${product.name} ble lagt til i handlekurven.`);
+    }
+  }  
+  const productlistHTML = document.getElementById('productlist');
   productlistHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if (positionClick.classList.contains('addCart')) {
-        alert('1');
+      alert('1');
     }
-});
-
+  });
 
 
