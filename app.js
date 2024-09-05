@@ -17,7 +17,7 @@ fetch('app.json')
     console.error('There has been a problem with fetch operation', error);
   });
 
-const showProducts = (productList) => {
+function showProducts(productList) {
   const productContainer = document.getElementById('productlist');
   productContainer.innerHTML = ''; 
   productList.forEach((item) => {
@@ -30,7 +30,7 @@ const showProducts = (productList) => {
             <button onclick="Cart(${item.id})">Legg til i handlekurven</button>
         </div>`; 
   });
-};
+}
 function productFilter(category) {
   let filteredProducts = productList; 
 
